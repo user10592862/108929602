@@ -269,6 +269,70 @@ header .logo:hover {
     margin-right: 30px;
 }
 
+/* Contact Section */
+#contact {
+    background-color: transparent;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 0; /* Remove any margin on top */
+}
+
+#contact h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.contact-box-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1165px; /* Adjusted width for alignment */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact-box {
+    background-color: transparent;
+    border: 2px solid #fff; /* White outline */
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.contact-box h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.contact-box p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.contact-box a {
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-box a:hover {
+    color: #0056b3;
+}
+
 /* Footer Styling */
 footer {
     text-align: center;
@@ -433,5 +497,41 @@ footer {
 
     .features h2 span {
         display: none;  /* Hide existing title span */
+    }
+}
+
+/* Mobile responsive styles for Contact Section */
+@media (max-width: 768px) {
+    #contact {
+        padding: 20px 10px;
+    }
+
+    #contact h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .contact-box-container {
+        grid-template-columns: 1fr; /* Stack the boxes vertically */
+        gap: 20px;
+        max-width: 90%; /* Allow the contact boxes to have more room */
+        margin: 0 auto;
+    }
+
+    .contact-box {
+        padding: 20px;
+        box-shadow: none; /* Reduce shadow on mobile for simplicity */
+    }
+
+    .contact-box h3 {
+        font-size: 18px;
+    }
+
+    .contact-box p {
+        font-size: 14px;
+    }
+
+    .contact-box a {
+        font-size: 14px;
     }
 }
