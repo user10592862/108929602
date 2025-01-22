@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subject Verse</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+    <header>
+        <a href="#" class="logo">Subject Verse</a>
+        <ul class="nav-links">
+        </ul>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#team">Our Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Welcome to Subject Verse</h1>
+            <p>Your revolutionary AI-powered learning assistant.</p>
+            <a href="#features" class="btn">Discover Features</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>Subject Verse is transforming education with cutting-edge AI technology to provide personalized learning experiences, enhance understanding, and redefine academic success. Our platform is designed to create personalized learning experiences that adapt to each student’s needs, unlocking their full academic potential. The state-of-the-art machine learning algorithms will provide tailored lessons, real-time progress tracking, and intuitive learning tools to empower students and educators alike.</p>
+    </section>
+
+    <section id="features" class="features">
+        <h2>Revolutionary Features</h2>
+        <div class="feature-list">
+            <div class="feature">
+                <h3>Powered Personalization</h3>
+                <p>Subject Verse uses cutting-edge artificial intelligence to create customized learning experiences for every student. Our AI technology adapts lessons based on individual learning patterns, strengths, and areas for improvement, ensuring each student receives the attention and resources they need for optimal growth. By analyzing progress in real-time, Subject Verse fine-tunes learning materials and assessments to match the student’s unique needs.</p>
+            </div>
+            <div class="feature">
+                <h3>Real-Time Insights</h3>
+                <p>Subject Verse empowers both students and educators with real-time progress tracking. Our platform provides detailed insights into a student’s learning journey, displaying metrics such as mastery over subjects, time spent on specific areas, and quiz scores. Teachers and parents can instantly view where the student excels or requires extra support, allowing for prompt interventions and a more engaged learning environment.</p>
+            </div>
+            <div class="feature">
+                <h3>Interactive Virtual Labs</h3>
+                <p>Subject Verse integrates hands-on learning with its interactive virtual labs, which allow students to explore complex concepts through simulations and real-world scenarios. Students can engage in immersive labs that enhance their understanding of scientific principles, and our collaborative tools enable seamless interaction between classmates and instructors, fostering peer learning, real-time discussions, and collaborative problem-solving sessions, all from the comfort of their home.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="team">
+        <h2>Our Team</h2>
+        <div class="team-member-container">
+            <div class="team-member">
+                <img src="images/FangJason.png" alt="">
+                <div>
+                    <h3>Jason Fang - Head of AI Development & Educational Innovation</h3>
+                    <p>Jason spearheads AI development at Subject Verse to drive educational innovation through advanced technologies. He oversees the integration of AI-powered tools to create personalized learning experiences and ensure adaptive educational strategies across the platform.
+                    </p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="team-member-2.jpg">
+                <div>
+                    <h3>Vacant - Lead Conversational AI Architect & Student Interaction Specialist</h3>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="team-member-container">
+            <div class="team-member">
+                <img src="team-member-3.jpg">
+                <div>
+                    <h3>Vacant - Learning Experience Designer & Adaptive Insights Analyst</h3>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="team-member-container">
+            <div class="team-member">
+                <img src="team-member-4.jpg">
+                <div>
+                    <h3>Vacant - Innovation Manager & Strategic Partnership Coordinator</h3>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="team-member-container">
+            <div class="team-member">
+                <img src="images/WuMaggie.png">
+                <div>
+                    <h3>Maggie Wu - Marketing & Digital Engagement Specialist</h3>
+                    <p>Maggie drives digital marketing initiatives and student engagement strategies. She is responsible for promoting Subject Verse’s platform, managing social media campaigns, and building a strong connection with the learning community online.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>&copy; 2025 Subject Verse. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 100, density: { enable: true, value_area: 800 } },
+                color: { value: "#ffffff" },
+                shape: { type: "circle", stroke: { width: 0, color: "#ffffff" } },
+                opacity: {
+                    value: 0.5,
+                    random: true,
+                    anim: { enable: true, speed: 1, opacity_min: 0.1 }
+                },
+                size: {
+                    value: 5,
+                    random: true,
+                    anim: { enable: true, speed: 2, size_min: 0.1 }
+                },
+                move: { enable: true, speed: 4, direction: "none", random: false }
+            },
+            interactivity: {
+                detect_on: "window",
+                events: {
+                    onhover: { enable: true, mode: "repulse" },
+                    onclick: { enable: true, mode: "push" }
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+</body>
+
+</html>
