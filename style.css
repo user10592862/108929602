@@ -29,7 +29,7 @@ body {
 }
 
 .hero-text {
-    max-width: 800px;
+    max-width: 1400px;
     margin-bottom: 40px;
 }
 
@@ -131,11 +131,10 @@ header .logo:hover {
     color: #008cba; /* Changes the text color to blue (you can customize this) */
     background-color: #333; /* Changes the background color to dark gray */
     border-radius: 5px; /* Adds rounded corners */
-    padding: 5px 10px; /* Adds some padding for the effect */
 }
 
 /* Section Styling */
-.about, .features, .team {
+.about, .features, .milestone {
     text-align: center;
     padding: 40px 20px;
     margin: 40px auto;
@@ -216,58 +215,7 @@ header .logo:hover {
     transform: scaleX(1); /* Ensures the line doesn't disappear and stays in place during hover */
     background-color: #fff; /* Change the color of the line during hover */
 }
-  
-/* Team Section Styling */
-.team .team-member-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin-top: 20px;
-    flex-wrap: wrap;
-}
 
-.team .team-member {
-    display: flex;
-    align-items: center;
-    flex: 1 1 calc(50% - 20px);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: left;
-    transition: transform 0.3s;
-    background: transparent;
-    border: 2px solid #fff;
-}
-
-
-/* Styling for the Team Section Title (assuming it's in h1 or h2) */
-.team h1, .team h2 {
-    font-size: 3rem; /* Increase font size for title */
-    font-weight: bold; /* Make the title bold */
-    margin-bottom: 20px; /* Add space below the title */
-    color: white; /* You can adjust the title color */
-}
-
-.team .team-member:hover {
-    transform: translateY(-10px);
-}
-
-.team .team-member h3 {
-    font-size: 1.6rem;
-    margin-bottom: 5px;
-}
-
-.team .team-member p {
-    font-size: 1.2rem;
-}
-
-.team .team-member img {
-    width: 130%;
-    max-width: 130px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-right: 30px;
-}
 
 /* Contact Section */
 #contact {
@@ -282,7 +230,7 @@ header .logo:hover {
     font-size: 3rem;
     font-weight: bold;
     color: #fff;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .contact-box-container {
@@ -340,6 +288,76 @@ footer {
     margin-top: 20px;
     background: rgba(0, 0, 0, 0);
     border-top: 2px solid #fff;
+}
+
+/* Milestones Section Styling */
+.milestones {
+    text-align: center;
+    padding: 40px 20px;
+    margin: 0px auto;
+    max-width: 1200px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.milestones h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.milestone-list {
+    display: flex;
+    flex-direction: column; /* Stack milestones vertically */
+    align-items: center; /* Center milestones horizontally */
+    gap: 0; /* Ensure no gap between boxes */
+}
+
+.milestone {
+    width: 100%; /* Full width for each milestone */
+    max-width: 1200px; /* Match the width of feature boxes */
+    padding: 30px; /* Match padding of feature boxes */
+    border-radius: 10px;
+    text-align: left; /* Align text to the left */
+    transition: transform 0.3s;
+    background: transparent;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    margin: 10px; /* Remove space between milestone boxes */
+}
+
+.milestone:hover {
+    transform: translateY(-10px);
+}
+
+.milestone h3 {
+    font-size: 1.6rem; /* Match feature box title size */
+    margin-bottom: 10px; /* Space between title and description */
+    color: #fff;
+}
+
+.milestone p {
+    font-size: 1.2rem; /* Match feature box description size */
+    color: #ccc;
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Mobile Responsive Styles for Milestones Section */
+@media (max-width: 768px) {
+    .milestone {
+        padding: 20px; /* Match feature box padding on mobile */
+    }
+
+    .milestone h3 {
+        font-size: 1.4rem; /* Adjust font size for mobile */
+    }
+
+    .milestone p {
+        font-size: 1rem; /* Adjust font size for mobile */
+    }
 }
 
 /* Mobile Styles */
@@ -403,41 +421,17 @@ footer {
         font-size: 1rem;
     }
 
-    .team {
-        display: block; /* Stack team members vertically */
-    }
-
-    .team .team-member {
-        display: block; /* Stack the content in the member block */
-        margin-bottom: 25px; /* Provide more space between members */
-    }
-
-    .team .team-member img {
-        width: 100px; /* Smaller images for mobile */
-        height: 100px;
-        margin-right: 0;
-        margin-bottom: 15px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .team .team-member .description {
-        max-width: 100%; /* Take the full available width */
-        font-size: 0.9rem; /* Slightly smaller font size */
-    }
-
     /* Targeting the p elements inside the About section */
-        .about p, #about p {
-            font-size: 1rem; /* Ensures text doesn't get too large on mobile */
-            line-height: 1.3; /* Slightly smaller line height for mobile */
-            margin-bottom: 5px; /* Reduce bottom space even further for better condensing */
-            padding: 10px; /* Adjusts padding to give a more compact feel */
-            margin-top: 5px; /* Reduces the top margin for mobile screens */
-            border-radius: 5px;
-            text-align: center;
-            text-shadow: none; /* Removes text-shadow to ensure text is clear on smaller screens */
-            border: 1px solid white; /* Thinner border for mobile screens */
+    .about p, #about p {
+        font-size: 1.2rem; /* Increase font size for title */
+        word-spacing: normal;  /* Ensures default word-spacing */
+        letter-spacing: normal;  /* Resets excessive letter-spacing */
+        line-height: 1.8;  /* Match line height of Features section */
+        padding: 15px;
+        border-radius: 5px;
+        text-align: center;
+        text-shadow: 1px 1px 5px #fff;
+        border: 2px solid white;
             
             /* Important fixes for word-spacing issue */
             letter-spacing: normal; /* Ensure there is no extra letter-spacing */
@@ -533,5 +527,68 @@ footer {
 
     .contact-box a {
         font-size: 14px;
+    }
+}
+
+/* Drop-Down Animation */
+@keyframes dropDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    /* Fix About Section Borders on Mobile */
+    .about, #about {
+        padding: 20px; /* Add padding to prevent borders from touching the edge */
+        margin: 20px auto; /* Add margin for better spacing */
+    }
+
+    .about p, #about p {
+        font-size: 1rem; /* Ensures text doesn't get too large on mobile */
+        line-height: 1.3; /* Slightly smaller line height for mobile */
+        margin-bottom: 5px; /* Reduce bottom space even further for better condensing */
+        padding: 10px; /* Adjusts padding to give a more compact feel */
+        margin-top: 5px; /* Reduces the top margin for mobile screens */
+        border-radius: 5px;
+        text-align: center;
+        text-shadow: none; /* Removes text-shadow to ensure text is clear on smaller screens */
+        border: 1px solid white; /* Thinner border for mobile screens */
+        
+        /* Important fixes for word-spacing issue */
+        letter-spacing: 1.8; /* Ensure there is no extra letter-spacing */
+        word-spacing: normal; /* Ensures no extra space between words */
+        white-space: normal; /* Ensures text wraps as needed */
+    }
+
+    /* Change Milestones Section Title on Mobile */
+    .milestones h2::after {
+        content: "Milestones"; /* Change title to "Milestones" on mobile */
+        display: block;
+    }
+
+    .milestones h2 span {
+        display: none; /* Hide the original title */
+    }
+
+    /* Center Milestones Section Details and Titles on Mobile */
+    .milestone {
+        text-align: center; /* Center text in milestone boxes */
+    }
+
+    .milestone h3 {
+        font-size: 18px; /* Adjust font size for mobile */
+        margin-bottom: 10px; /* Space between title and description */
+    }
+
+    .milestone p {
+        font-size: 1rem; /* Adjust font size for mobile */
+        text-align: center; /* Center-align description text */
     }
 }
