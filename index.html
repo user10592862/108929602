@@ -92,23 +92,60 @@
 
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
-        <div class="contact-box-container">
-            <div class="contact-box">
-                <h3>General Inquiries:</h3>
-                <p><a href="mailto:info@subjectverse.com">info@subjectverse.com</a></p>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-box-container">
+                    <div class="disclaimer-box">
+                        <h3>Service Notice</h3>
+                        <p>Subject Verse offers AI-powered educational tools and services through our trusted network of partners and collaborators. We do not host our tools directly but instead license them to qualified organizations and institutions. Our platform is designed to enhance personalized learning experiences. We actively seek partnerships with schools, universities, nonprofit organizations, and businesses that share our vision of making high-quality education accessible to all. Nonprofit organizations can access our tools at no cost, while businesses can benefit from our services at cheap and affordable rates. If you’re interested in collaborating with us and leveraging our AI-driven resources, please reach out through our contact form to explore partnership opportunities.</p>
+                    </div>
+                </div>
             </div>
-    
-            <div class="contact-box">
-                <h3>Collaborations:</h3>
-                <p><a href="mailto:partnerships@subjectverse.com">partnerships@subjectverse.com</a></p>
-            </div>
-    
-            <div class="contact-box">
-                <h3>Future Opportunities:</h3>
-                <p><a href="mailto:opportunities@subjectverse.com">opportunities@subjectverse.com</a></p>
+            
+            <div class="contact-form-box">
+                <form id="contact-form" action="https://formspree.io/f/xeoeqero" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" required>
+                        <label>Your Name</label>
+                        <span class="highlight"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" name="email" required>
+                        <label>Your Email</label>
+                        <span class="highlight"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <select name="subject" required>
+                            <option value="" disabled selected></option>
+                            <option value="General Inquiry">General Inquiry</option>
+                            <option value="Partnership">Partnership Opportunity</option>
+                            <option value="Technical Support">Technical Support</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <label>Subject</label>
+                        <span class="highlight"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea name="message" rows="5" required></textarea>
+                        <label>Your Message</label>
+                        <span class="highlight"></span>
+                    </div>
+                    
+                    <button type="submit" class="form-submit-btn">
+                        <span>Send Message</span>
+                        <svg viewBox="0 0 13 10" height="10px" width="15px">
+                            <path d="M1,5 L11,5"></path>
+                            <polyline points="8 1 12 5 8 9"></polyline>
+                        </svg>
+                    </button>
+                </form>
             </div>
         </div>
-</section>
+    </section>
 
     <footer>
         <p>&copy; 2025 Subject Verse. All Rights Reserved.</p>
