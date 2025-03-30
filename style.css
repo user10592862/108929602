@@ -24,7 +24,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 80px; /* Make space below header */
+    margin-top: 20px; /* Make space below header */
     padding: 20px;
 }
 
@@ -279,12 +279,12 @@ header .logo:hover {
 .disclaimer-box h3 {
     font-size: 1.5rem !important;
     color: #fff !important;
-    margin-bottom: 27px !important;
+    margin-bottom: 24px !important;
     font-weight: bold !important;
 }
 
 .disclaimer-box p {
-    font-size: 1rem !important;
+    font-size: 1.2rem !important;
     color: #ccc !important;
     line-height: 1.6 !important;
     margin: 0 !important;
@@ -877,10 +877,42 @@ footer {
 /* ==================== */
 /* CONTACT SECTION - MOBILE (480px and below) */
 /* ==================== */
-@media (max-width: 480px) {
+/* ==================== */
+/* DESKTOP CONTACT SECTION WIDTH FIX */
+/* Only applies to screens wider than 768px */
+/* ==================== */
+@media (min-width: 769px) {
+    #contact {
+        max-width: 1250px; /* Match other sections */
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+
+    .contact-container {
+        max-width: 1250px; /* Match other sections */
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    /* Make contact boxes match width of feature boxes */
+    .disclaimer-box,
+    .contact-form-box {
+        flex: 1;
+        min-width: 0; /* Allow flexbox to shrink them */
+        max-width: 625px; /* Adjusted to match feature boxes */
+    }
+}
+
+/* ==================== */
+/* MOBILE STYLES - KEEP EXACTLY AS THEY WERE */
+/* ==================== */
+@media (max-width: 768px) {
+    /* Your existing mobile styles remain untouched */
     #contact {
         padding: 16px 6px !important;
-        overflow-x: hidden !important; /* Prevent horizontal scroll */
+        overflow-x: hidden !important;
     }
 
     .contact-container {
@@ -890,23 +922,125 @@ footer {
     }
 
     .disclaimer-box {
-        width: calc(100% - 15px) !important; /* Account for margin */
+        width: calc(100% - 15px) !important;
         max-width: 360px !important;
         padding: 14px !important;
-        margin: 0 auto 15px !important; /* Center instead of right margin */
+        margin: 0 auto 15px !important;
     }
 
     .contact-form-box {
-        width: calc(100% - 38px) !important; /* Account for margins (20+18) */
+        width: calc(100% - 38px) !important;
         min-width: 275px !important;
-        max-width: 90% !important; /* Changed from 380px */
+        max-width: 90% !important;
         padding: 12px !important;
-        margin: 0 auto !important; /* Center the form */
+        margin: 0 auto !important;
     }
 
     .form-submit-btn {
         max-width: 200px !important;
         margin: 0 auto !important;
         display: block !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        margin-top: 70px; /* Reduced from 50px */
+        padding: 10px 15px; /* Reduced padding */
+        height: auto; /* Let content determine height */
+        min-height: 80vh; /* Still fill most of screen */
+    }
+
+    .hero-text {
+        margin-bottom: 20px; /* Reduced space */
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem; /* Slightly smaller */
+        margin-bottom: 10px;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+}
+
+/* ==================== */
+/* MOBILE TEXT & SPACING STANDARDIZATION */
+/* Applies to both 480px and 768px screens */
+/* ==================== */
+@media (max-width: 768px) {
+    /* Standardized Text Sizes */
+    .hero-text h1 {
+        font-size: 2.5rem; /* Unified size */
+        margin-bottom: 15px; /* Standard spacing */
+    }
+    
+    .hero-text p,
+    .about p,
+    #about p,
+    .features .feature p,
+    .milestone p,
+    .disclaimer-box p {
+        font-size: 1.1rem; /* Unified text size */
+        line-height: 1.6; /* Consistent line height */
+        margin-bottom: 15px; /* Standard bottom margin */
+    }
+
+    /* Section Headers */
+    .about h1, .about h2,
+    #features h2,
+    .milestones h2,
+    #contact h2 {
+        font-size: 2.2rem; /* Unified header size */
+        margin-bottom: 25px; /* Standard spacing */
+    }
+
+    /* Feature Boxes */
+    .features .feature h3,
+    .milestone h3 {
+        font-size: 1.5rem; /* Unified subheader size */
+        margin-bottom: 12px; /* Standard spacing */
+    }
+
+    /* Standardized Padding */
+    .about, .features, .milestone, #contact {
+        padding: 30px 15px; /* Unified padding */
+    }
+
+    /* Contact Form Elements */
+    .form-group label {
+        font-size: 1rem; /* Unified label size */
+    }
+
+    /* Buttons */
+    .btn,
+    .form-submit-btn {
+        font-size: 1.1rem; /* Unified button text */
+        padding: 14px 28px; /* Standard padding */
+    }
+}
+
+/* ==================== */
+/* 480px SPECIFIC TWEAKS */
+/* ==================== */
+@media (max-width: 480px) {
+    /* Slightly reduce hero heading on smallest screens */
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+    
+    /* Tighten some spacing on very small screens */
+    .about, .features, .milestone, #contact {
+        padding: 25px 12px;
+    }
+    
+    /* Reduce section header size slightly */
+    .about h1, .about h2,
+    #features h2,
+    .milestones h2,
+    #contact h2 {
+        font-size: 2rem;
     }
 }
