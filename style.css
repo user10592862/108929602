@@ -593,9 +593,10 @@ footer {
     }
 }
 
-/* Add spacing and padding to the About description */
+/* Add spacing, padding, and remove bold to the About description */
 section#about p {
-    line-height: 1.8 !important; /* Increases the spacing between lines */
+    line-height: 2.2 !important; /* Increases the spacing between lines */
     padding-bottom: 20px !important; /* Adds padding at the bottom of the paragraph */
     margin-bottom: 20px !important; /* Adds margin below the paragraph */
+    font-weight: normal !important; /* Removes bold styling */
 }
