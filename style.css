@@ -592,3 +592,10 @@ footer {
         text-align: center; /* Center-align description text */
     }
 }
+
+/* Add spacing and padding to the About description */
+section#about p {
+    line-height: 1.8 !important; /* Increases the spacing between lines */
+    padding-bottom: 20px !important; /* Adds padding at the bottom of the paragraph */
+    margin-bottom: 20px !important; /* Adds margin below the paragraph */
+}
