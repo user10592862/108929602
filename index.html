@@ -19,19 +19,19 @@
 <body>
     <div id="particles-js"></div>
 
-    <header>
-        <a href="#" class="logo">Subject Verse</a>
+<header>
+    <span class="logo">Subject Verse</span>  <!-- Changed from <a> to <span> -->
+    <ul class="nav-links">
+    </ul>
+    <nav>
         <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#milestones">Milestones</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#milestones">Milestones</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    </nav>
+</header>
 
     <section class="hero">
         <div class="hero-text">
@@ -147,9 +147,10 @@
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Subject Verse. All Rights Reserved.</p>
-    </footer>
+<!-- Update just the footer section in your HTML -->
+<footer>
+    <p style="font-size: 1.4rem;">&copy; 2025 Subject Verse</p>
+</footer>
 
     <script>
         particlesJS("particles-js", {
@@ -180,5 +181,6 @@
         });
     </script>
 
+    <script src="script.js" defer></script>
 </body>
 </html>
