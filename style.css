@@ -1044,3 +1044,104 @@ footer {
         font-size: 2rem;
     }
 }
+
+/* Add these styles to your existing CSS */
+/* Active navigation link styling */
+nav ul li a.active {
+    font-weight: bold;
+    position: relative;
+    color: #ffffff;
+}
+
+nav ul li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    animation: underline 0.3s ease-out;
+}
+
+@keyframes underline {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Button hover effects */
+.btn {
+    transition: all 0.3s ease;
+    transform: translateY(0);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Form submit button animation */
+.form-submit-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.form-submit-btn:hover svg {
+    transform: translateX(5px);
+}
+
+/* Remove all hover effects from header */
+header .logo:hover {
+    color: #fff; /* Keep the same color as default */
+    background-color: transparent; /* Remove background change */
+    border-radius: 0; /* Remove rounded corners */
+}
+
+header .nav-links a:hover {
+    color: #fff; /* Keep the same color as default */
+    background-color: transparent; /* Remove background change */
+    border-radius: 0; /* Remove rounded corners */
+}
+
+/* Add this to your CSS to remove all header hover effects */
+header .logo {
+    cursor: default; /* Changes cursor to default (not clickable) */
+    pointer-events: none; /* Prevents any mouse events */
+}
+
+header .logo:hover {
+    color: #fff !important; /* Force white color on hover */
+    background-color: transparent !important;
+    text-decoration: none !important;
+}
+
+header .nav-links a:hover {
+    color: #fff !important;
+    background-color: transparent !important;
+    text-decoration: none !important;
+    cursor: pointer; /* Keep pointer cursor for clickable links */
+}
+
+/* Add this to your existing CSS */
+header .nav-links a {
+    position: relative;
+}
+
+header .nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+header .nav-links a:hover::after {
+    width: 100%;
+}
